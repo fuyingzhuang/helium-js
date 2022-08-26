@@ -20,7 +20,7 @@ export default class Address {
   public publicKey!: Uint8Array
 
   constructor(version: number, netType: NetType, keyType: KeyType, publicKey: Uint8Array) {
-    if (version !== 0) {
+      if (version !== 113) {
       throw new Error('unsupported version')
     }
     if (!SUPPORTED_NET_TYPES.includes(netType)) {
@@ -56,7 +56,7 @@ export default class Address {
   }
 
   static fromBin(bin: Buffer): Address {
-    const version = 0
+    const version = 113
     const byte = bin[0]
     const netType = byteToNetType(byte)
     const keyType = byteToKeyType(byte)
