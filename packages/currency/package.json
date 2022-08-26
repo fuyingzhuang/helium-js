@@ -1,0 +1,32 @@
+{
+  "name": "@helium/currency",
+  "version": "4.7.3",
+  "description": "Utilities for handling different currency types on the Helium blockchain",
+  "keywords": [
+    "helium",
+    "blockchain",
+    "currency"
+  ],
+  "contributors": [
+    "Andrew Allen <allenan@helium.com>"
+  ],
+  "homepage": "https://github.com/helium/helium-js",
+  "license": "Apache-2.0",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean": "rimraf build",
+    "build": "yarn run clean && tsc"
+  },
+  "dependencies": {
+    "bignumber.js": "^9.0.0"
+  },
+  "gitHead": "16442bef09f90dd9a83d4c9e1a347de3e80575e4"
+}

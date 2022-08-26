@@ -1,0 +1,48 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna run build",
+    "test": "jest --coverage",
+    "lint": "eslint --ext .ts ./",
+    "format": "prettier-standard --format",
+    "coveralls": "cat ./coverage/lcov.info | coveralls",
+    "preversion": "yarn build",
+    "docs": "typedoc"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "roots": [
+      "packages/crypto/src",
+      "packages/crypto-react-native/src",
+      "packages/http/src",
+      "packages/onboarding/src",
+      "packages/transactions/src",
+      "packages/currency/src",
+      "packages/address/src",
+      "packages/wallet-link/src",
+      "integration_tests/tests"
+    ],
+    "collectCoverageFrom": [
+      "packages/**/src/**/*.ts"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.6",
+    "@typescript-eslint/eslint-plugin": "4.7.0",
+    "coveralls": "^3.1.1",
+    "eslint-config-airbnb-typescript": "^17.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^28.1.3",
+    "lerna": "^5.3.0",
+    "nock": "^13.2.9",
+    "prettier-standard": "^16.4.1",
+    "rimraf": "^3.0.2",
+    "standard": "^17.0.0",
+    "ts-jest": "^28.0.7",
+    "typedoc": "^0.23.10",
+    "typescript": "4.1.2"
+  }
+}

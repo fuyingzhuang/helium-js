@@ -1,0 +1,37 @@
+{
+  "name": "@helium/address",
+  "version": "4.6.2",
+  "description": "Helium public key utilities",
+  "keywords": [
+    "helium",
+    "blockchain",
+    "currency"
+  ],
+  "contributors": [
+    "Andrew Allen <allenan@helium.com>"
+  ],
+  "homepage": "https://github.com/helium/helium-js",
+  "license": "Apache-2.0",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean": "rimraf build",
+    "build": "yarn run clean && tsc"
+  },
+  "gitHead": "16442bef09f90dd9a83d4c9e1a347de3e80575e4",
+  "dependencies": {
+    "bs58": "^5.0.0",
+    "js-sha256": "^0.9.0",
+    "multiformats": "^9.6.4"
+  },
+  "devDependencies": {
+    "@types/bs58": "4.0.1"
+  }
+}

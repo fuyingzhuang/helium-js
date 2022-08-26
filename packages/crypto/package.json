@@ -1,0 +1,38 @@
+{
+  "name": "@helium/crypto",
+  "version": "4.6.2",
+  "description": "Cryptography utilities including mnemonics, keypairs and base58-check encoding",
+  "keywords": [
+    "helium",
+    "blockchain",
+    "crypto"
+  ],
+  "contributors": [
+    "Andrew Allen <allenan@helium.com>"
+  ],
+  "homepage": "https://github.com/helium/helium-js",
+  "license": "Apache-2.0",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "files": [
+    "build"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "clean": "rimraf build",
+    "build": "yarn run clean && tsc"
+  },
+  "dependencies": {
+    "@helium/address": "^4.6.2",
+    "create-hash": "^1.2.0",
+    "libsodium-wrappers": "^0.7.6"
+  },
+  "devDependencies": {
+    "@types/create-hash": "1.2.2",
+    "@types/libsodium-wrappers": "0.7.8"
+  },
+  "gitHead": "16442bef09f90dd9a83d4c9e1a347de3e80575e4"
+}

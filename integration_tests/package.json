@@ -1,0 +1,17 @@
+{
+  "name": "integration-tests",
+  "private": true,
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "@helium/address": "^4.6.2",
+    "@helium/crypto": "^4.6.2",
+    "@helium/http": "^4.7.5",
+    "@helium/transactions": "^4.7.5"
+  },
+  "version": "4.7.5",
+  "devDependencies": {
+    "nock": "^13.2.4"
+  }
+}
